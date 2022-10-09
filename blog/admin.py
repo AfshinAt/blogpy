@@ -15,6 +15,12 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
 @admin.register(Post)
 class PostAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     list_display = ('title', 'category', 'visit', 'status')
@@ -32,12 +38,6 @@ class PostAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     @admin.display(description='تاریخ آپدیت', ordering='created_at')
     def get_created_jalali(self, obj):
         return datetime2jalali(obj.created_at).strftime('%a, %d %b %Y %H:%M:%S')
-
-
-@admin.register(Tag)
-class TagAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    search_fields = ('name',)
 
 
 admin.site.site_header = 'پنل مدیریت بلاگ پای'
