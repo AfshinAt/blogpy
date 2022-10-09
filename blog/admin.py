@@ -32,7 +32,7 @@ class PostAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
 
     fieldsets = [
         ('اطلاعات', {'fields': ['title', 'cover']}),
-        ('تکمیل اطلاعات', {'fields': ['category', 'description', 'visit', 'status', 'author', 'updated_at']})
+        ('تکمیل اطلاعات', {'fields': ['category', 'description', 'visit', 'status', 'author', 'tag', 'updated_at']})
     ]
 
     @admin.display(description='تاریخ آپدیت', ordering='created_at')
