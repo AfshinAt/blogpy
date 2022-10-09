@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Post, Category, Tag
+from blog.models import Category, Tag, Post
 from jalali_date import datetime2jalali
 from jalali_date.admin import ModelAdminJalaliMixin
 
