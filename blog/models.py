@@ -7,7 +7,7 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField('نام', max_length=24)
-    image = models.ImageField('عکس', upload_to='media/category/')
+    image = models.ImageField('عکس', upload_to='category')
 
     def __str__(self):
         return self.name
@@ -34,7 +34,7 @@ class Post(models.Model):
         ('1', 'منتشر شده')
     )
     title = models.CharField('عنوان', max_length=256)
-    cover = models.ImageField('کاور', upload_to='media/post/', blank=True, null=True)
+    cover = models.ImageField('کاور', upload_to='post', blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='دسته بندی')
     description = models.TextField('متن', blank=True, null=True)
     visit = models.PositiveIntegerField('بازدید ها', default=0)
