@@ -1,0 +1,106 @@
+              {% load static jalali_tags %}
+              <!-- Start Sidebar Area  -->
+              <div class="sidebar-inner">
+                <!-- Start Single Widget  -->
+                <div class="axil-single-widget widget widget_categories mb--30">
+                  <ul>
+                      {% for category in sidbar.category %}
+                    <li class="cat-item">
+                      <a href="#" class="inner">
+                        <div class="thumbnail">
+                          <img
+                            src="{{ category.image.url }}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="content">
+                          <h6 class="title">{{ category.name }}</h6>
+                        </div>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <!-- End Single Widget  -->
+
+                <!-- Start Single Widget  -->
+                <div class="axil-single-widget widget widget_search mb--30">
+                  <h5 class="widget-title">جستجو</h5>
+                  <form action="#">
+                    <div class="axil-search form-group">
+                      <button type="submit" class="search-button">
+                        <i class="fal fa-search"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="جستجو"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <!-- End Single Widget  -->
+
+                <!-- Start Single Widget  -->
+                <div class="axil-single-widget widget widget_postlist mb--30">
+                  <h5 class="widget-title">بهترین ها</h5>
+                  <!-- Start Post List  -->
+                  <div class="post-medium-block">
+                    <!-- Start Single Post  -->
+                      {% for item in sidbar.popular_post %}
+                    <div class="content-block post-medium mb--20">
+                      <div class="post-thumbnail">
+                        <a href="{% url 'blog:detail' item.id %}">
+                          <img
+                            src="{{ item.cover.url }}"
+                            alt="Post Images"
+                          />
+                        </a>
+                      </div>
+                      <div class="post-content">
+                        <h6 class="title">
+                          <a href="{% url 'blog:detail' item.id %}"
+                            >{{ item.title }}
+                          </a>
+                        </h6>
+                        <div class="post-meta">
+                          <ul class="post-meta-list">
+                            <li>{{ item.created_at|to_jalali:'%Y/%m/%d' }}</li>
+                            <li>{{ item.visit }} نفر بازدید</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Single Post  -->
+                      {% endfor %}
+                  </div>
+                  <!-- End Post List  -->
+                </div>
+                <!-- End Single Widget  -->
+
+                <!-- Start Single Widget  -->
+                <div class="axil-single-widget widget widget_social mb--30">
+                  <h5 class="widget-title">شبکه های اجتماعی ما</h5>
+                  <!-- Start Post List  -->
+                  <ul class="social-icon md-size justify-content-center">
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-slack"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                  <!-- End Post List  -->
+                </div>
+                <!-- End Single Widget  -->
+              </div>
+              <!-- End Sidebar Area  -->

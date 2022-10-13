@@ -5,7 +5,7 @@
           <div class="row justify-content-between align-items-center">
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-9">
               <div class="logo text-right mb-sm-0">
-                <a href="index.html">
+                <a href="{% url 'details:home' %}">
                   <img
                     class="dark-logo"
                     src="{% static 'assets/images/logo/logo-black.png' %}"
@@ -26,41 +26,22 @@
                   <!-- Start Mainmanu Nav -->
                   <ul class="mainmenu">
                     <li>
-                      <a href="index.html">خانه</a>
+                      <a href="{% url 'details:home' %}">خانه</a>
                     </li>
                     <li class="menu-item-has-children">
                       <a href="#">دسته بندی</a>
                       <ul class="axil-submenu">
+                          {% for item in sidbar.category %}
                         <li>
-                          <a class="hover-flip-item-wrapper" href="index.html">
+                          <a class="hover-flip-item-wrapper" href="{% url 'blog:list'%}">
                             <span class="hover-flip-item">
-                              <span data-text="نسخه 1">نسخه 1</span>
+                              <span data-text="همه">همه</span>
                             </span>
                           </a>
                         </li>
-                        <li>
-                          <a
-                            class="hover-flip-item-wrapper"
-                            href="home-creative-blog.html"
-                          >
-                            <span class="hover-flip-item">
-                              <span data-text="نسخه 2">نسخه 2</span>
-                            </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            class="hover-flip-item-wrapper"
-                            href="home-seo-blog.html"
-                          >
-                            <span class="hover-flip-item">
-                              <span data-text="نسخه 3">نسخه 3</span>
-                            </span>
-                          </a>
-                        </li>
+                          {% endfor %}
                       </ul>
                     </li>
-
                     <li>
                       <a href="contact.html">تماس با ما</a>
                     </li>
