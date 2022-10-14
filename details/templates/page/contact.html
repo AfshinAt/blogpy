@@ -1,0 +1,135 @@
+{% extends 'base.html' %}{% block content %}
+{% load static jalali_tags %}
+      <!-- Start Banner Area  -->
+      <div class="axil-banner banner-style-1 bg_image bg_image--3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="inner text-right">
+                <h1 class="title">تماس با ما</h1>
+                <p class="description">
+                  هر جا که به ما نیاز داشتی ما اینجا برای شما هستیم - برای تمام
+                  نیازهای پشتیبانی خود با ما تماس بگیرید.<br />
+                  چه فنی، چه سوالات عمومی یا پشتیبانی اطلاعاتی.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Banner Area  -->
+
+      <!-- Start Post List Wrapper  -->
+      <div class="axil-post-list-area axil-section-gap bg-color-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-xl-8">
+              <!-- Start About Area  -->
+              <div class="axil-about-us text-justify">
+                <div class="inner">
+                  <h2>راه های ارتباطی با ما</h2>
+                  <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه
+                    و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                    کاربردی می باشد.
+                  </p>
+                  <p>
+                    <strong
+                      >لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با استفاده از طراحان گرافیک است</strong
+                    >. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                    لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                    متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
+                    در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و
+                    متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+                    طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در
+                    زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام
+                    و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان
+                    رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی
+                    سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                  </p>
+                  <p class="primary-color">
+                    پست الکترونیکی <a href="#">mepress@gmail.com</a>
+                  </p>
+                </div>
+                <!-- Start Contact Form  -->
+                <div class="axil-section-gapTop axil-contact-form-area">
+                  <h4 class="title mb--10">فرم ارسال درخواست</h4>
+                  <p class="b3 mb--30">
+                    آدرس ایمیل شما منتشر نخواهد شد. همه موارد لازم هستند.
+                  </p>
+                  <form
+                    id="contact-form"
+                    method="POST"
+                    action="#"
+                    class="axil-contact-form contact-form--1 row"
+                  >
+                    <div class="col-lg-4 col-md-4 col-12">
+                      <div class="form-group">
+                        <label for="contact-name">نام و نام خانوادگی</label>
+                        <input
+                          name="contact-name"
+                          id="contact-name"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                      <div class="form-group">
+                        <label for="contact-phone">شماره تماس</label>
+                        <input
+                          type="text"
+                          name="contact-phone"
+                          id="contact-phone"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                      <div class="form-group">
+                        <label>پست الکترونیکی</label>
+                        <input
+                          for="contact-email"
+                          name="contact-email"
+                          id="contact-email"
+                          type="email"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="contact-message">متن درخواست</label>
+                        <textarea
+                          name="contact-message"
+                          id="contact-message"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-submit">
+                        <button
+                          name="submit"
+                          type="submit"
+                          id="submit"
+                          class="axil-button button-rounded btn-primary"
+                        >
+                          ارسال
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- End Contact Form  -->
+              </div>
+              <!-- End About Area  -->
+            </div>
+            <div class="col-lg-4 col-xl-4 mt_md--40 mt_sm--40">
+             {% include 'sidbar.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Post List Wrapper  -->
+{% endblock %}
